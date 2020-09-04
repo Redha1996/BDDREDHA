@@ -1,26 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/ScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<EditText
+android:id="@+id/nom"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="99dp"
+android:layout_marginLeft="99dp"
+android:layout_marginTop="60dp"
+android:layout_marginEnd="99dp"
+android:layout_marginRight="99dp"
+android:autofillHints=""
+android:ems="10"
+android:hint="nom"
+android:inputType="textPersonName"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+<EditText
+android:id="@+id/prenom"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="99dp"
+android:layout_marginLeft="99dp"
+android:layout_marginEnd="99dp"
+android:layout_marginRight="99dp"
+android:layout_marginBottom="10dp"
+android:autofillHints=""
+android:ems="10"
+android:hint="prenom"
+android:inputType="textPersonName"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/nom" />
 
-            <TextView
-                android:id="@+id/scoresView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
+<EditText
+android:id="@+id/numero"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="99dp"
+android:layout_marginLeft="99dp"
+android:layout_marginEnd="99dp"
+android:layout_marginRight="99dp"
+android:layout_marginBottom="10dp"
+android:autofillHints=""
+android:ems="10"
+android:hint="numero"
+android:inputType="phone"
+app:layout_constraintBottom_toTopOf="@+id/mail"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/prenom" />
 
-</RelativeLayout>
+<EditText
+android:id="@+id/mail"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginBottom="10dp"
+android:autofillHints=""
+android:ems="10"
+android:hint="mail"
+android:inputType="textEmailAddress"
+app:layout_constraintBottom_toTopOf="@+id/adresse"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/numero" />
+
+<EditText
+android:id="@+id/adresse"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="99dp"
+android:layout_marginLeft="99dp"
+android:layout_marginEnd="99dp"
+android:layout_marginRight="99dp"
+android:layout_marginBottom="10dp"
+android:autofillHints=""
+android:ems="10"
+android:hint="adresse"
+android:inputType="textPersonName"
+app:layout_constraintBottom_toTopOf="@+id/spinner"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.333"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/mail" />
+
+<Spinner
+android:id="@+id/spinner"
+android:layout_width="206dp"
+android:layout_height="47dp"
+android:layout_marginTop="8dp"
+android:entries="spinner"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/adresse" />
+
+<Button
+android:id="@+id/add"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginStart="158dp"
+android:layout_marginLeft="158dp"
+android:layout_marginEnd="165dp"
+android:layout_marginRight="165dp"
+android:layout_marginBottom="184dp"
+android:text="ajouter"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="1.0"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/spinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
